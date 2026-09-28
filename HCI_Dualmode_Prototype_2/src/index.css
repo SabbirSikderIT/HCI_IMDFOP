@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+}
+
+@keyframes fillProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+@keyframes successScale {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes vibrateX {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulseBeacon {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(249,115,22,0); }
+}
+@keyframes overlayIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.anim-progress { animation: fillProgress 1.9s ease-out forwards; }
+.anim-success { animation: successScale 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.anim-vibrate { animation: vibrateX 0.12s ease-in-out 4; }
+.anim-fade-up { animation: fadeUp 0.3s ease-out forwards; }
+.anim-spin { animation: spin 0.9s linear infinite; display: inline-block; }
+.anim-beacon { animation: pulseBeacon 1.8s ease-in-out infinite; }
+.anim-overlay { animation: overlayIn 0.3s ease-out forwards; }
+
+* { scrollbar-width: none; }
+::-webkit-scrollbar { display: none; }
+button { -webkit-tap-highlight-color: transparent; user-select: none; }
