@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --color-teal-950: #0a2a2a;
+  --color-teal-900: #0d3535;
+  --color-teal-800: #134040;
+  --color-teal-700: #1a5454;
+  --color-teal-600: #226868;
+  --color-teal-500: #2d8080;
+  --color-teal-400: #3d9999;
+  --color-teal-100: #d0ecec;
+  --color-teal-50: #eaf5f5;
+  --color-gold-600: #b5860a;
+  --color-gold-500: #d4a017;
+  --color-gold-400: #e8b830;
+  --color-gold-100: #fdf3d4;
+  --color-cream: #faf8f3;
+  --color-warm-50: #fdf9f3;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f0ece4;
+}
+
+/* Hide scrollbars by default, show on hover */
+.scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
